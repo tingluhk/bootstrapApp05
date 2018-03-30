@@ -1,2 +1,44 @@
 body {
-  background: #b650fb; }
+  background: #333;
+  color: #fff; }
+
+.navbar {
+  border-bottom: #f47813 3px solid;
+  opacity: .8; }
+
+#home-section {
+  background-image: url("../img/background02.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px; }
+  #home-section .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px; }
+  #home-section .home-inner {
+    padding-top: 150px; }
+  #home-section .card-form {
+    opacity: .8; }
+  #home-section .fa {
+    color: #f47813;
+    background: #333;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 20px; }
+
+#explore-section .fa, #share-section .fa {
+  color: #fff;
+  background: #333;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 20px; }
+
+#create-section .fa {
+  color: #f47813;
+  background: #fff;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 20px; }
