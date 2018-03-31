@@ -7,6 +7,8 @@
 - src\flexSample.html
 
 
+![Image of Introduction](https://github.com/tingluhk/bootstrapApp05/blob/thomas/0501/src/images/introduction02.jpg?raw=true)
+
 
 # Start server
 app05
