@@ -10,3 +10,8 @@ sudo npm install -g gulp-cli
 
 
 To start the server type "gulp" or "npm start" (because the package.json file we edited the "script start gulp")
+
+
+#Resources
+jqueryscript.net
+pexels.com
