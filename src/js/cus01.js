@@ -1,4 +1,23 @@
 
+// ========= index js
+
+$('.port-item').click(function(){
+  $('.collapse').collapse('hide')
+})
+
+
+
+
+
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+});
+
+
+
+
+
 // ----- Test buttons
 $("#button01").click(function(){
   console.log("yo")
