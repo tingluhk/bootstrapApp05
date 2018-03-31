@@ -1,3 +1,8 @@
+![Image of Introduction](https://github.com/tingluhk/bootstrapApp05/blob/thomas/0501/src/images/introduction01.jpg?raw=true)
+
+
+
+
 # FlexBox Important Tutorial!
 - src\flexSample.html
 
