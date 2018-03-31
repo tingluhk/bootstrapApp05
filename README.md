@@ -1,3 +1,7 @@
+![Image of Introduction](https://github.com/tingluhk/bootstrapApp05/blob/thomas/0101/src/images/intro01.jpg?raw=true)
+
+
+
 app05
 npm init
 npm install bootstrap@4.0.0 font-awesome jquery popper.js --save
