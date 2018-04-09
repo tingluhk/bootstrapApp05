@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>css grid</title>
+  <link rel="stylesheet" href="../css/style09.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+
+
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+
+
+
+
+
+
+<hr>
+wrapper01
+<div class="wrapper01">
+
+  <div>question number 1 - how much did you spend?</div>
+  <input type="text" value="" class="cus_pop p_r_e_1 ">
+
+  <div>question number 2 - what did you buy?</div>
+  <input type="text" value="" class="cus_pop p_t_e_2 ">
+
+  <div>question number 3 - how fast does it turn?</div>
+  <input type="text" value="" class="cus_pop p_l_e_3 ">
+
+
+  <div>Lorem ipsum dolor sit ameetur adipisicingtetur adipisicing, consectetur adipisicing elit. Ab, enim?</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<button onclick="closepopover()">close pop over</button>
+
+
+<button class="cus_btb01">cus_btb01</button>
+
+
+<br>
+<br>
+<br>
+
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+
+
+<script>
+
+function closepopover(){
+  let allinputs = $('.cus_pop');
+  $(allinputs).removeAttr('data-placement');
+  $(allinputs).removeAttr('data-content');
+  $(allinputs).removeAttr('data-original-title');
+  $(allinputs).removeAttr('aria-describedby');
+}
+
+
+$(document).ready(function(){
+
+  $('input').on('click',function(){
+    console.log("input clicked");
+    closepopover();
+  })
+  $('.popover01').popover();
+  $('.popover02').popover();
+  $('.cus_pop').popover()
+});
+
+
+
+$(".cus_btb01").on("click",function(){
+
+  let allinputs = $('.cus_pop');
+  $(allinputs).popover("hide")
+  // console.log("allinputs === ");
+  // console.log(allinputs);
+
+  for(var i=0; i<allinputs.length; i++){
+    triggerPopOver(i,allinputs[i])
+  }
+
+})
+
+function triggerPopOver(i, allinput){
+  console.log("allinput = ");
+  console.log(allinput);
+
+  let inp01 = $(allinput).val();
+  console.log("inp01 = ");
+  console.log(inp01);
+  if(inp01 === ""){
+    //show popover
+    let all_classes = $(allinput).attr('class');
+    all_classes = all_classes.split(" ");
+    // console.log("typeof(all_classes) == ");
+    // console.log(typeof(all_classes));
+    // console.log(all_classes[1]);
+    let choices = all_classes[1].split("_");
+    // console.log("choices = ");
+    // console.log(choices[3]);
+    let content = choices[3]
+    let position = choices[1]
+    let error = getErrors(content)
+    makePopover($(allinput),'right',error)
+    // $('.cus_pop').popover('show')
+  }else{
+    //does nothing
+  }
+
+
+
+  // console.log("position = " + position +", content = " + content + ", error = " + error);
+
+
+
+}
+
+
+function getErrors(num){
+  let num1 = parseInt(num);
+  switch(num1) {
+    case 1:
+        return "you need to get margin correct"
+        break;
+    case 2:
+        return "please jump 3 steps"
+        break;
+    case 3:
+        return "please go to cordination 140,410"
+        break;
+    case 4:
+        return "somethig is wrong please fix it"
+        break;
+    default:
+        return "default error block"
+    }
+}
+
+
+
+function makePopover(ele,placement,content){
+  $(ele).attr('data-placement',placement);
+  $(ele).attr('data-content',content);
+  $(ele).popover('show');
+
+  console.log("ele");
+  console.log(ele);
+
+}
+</script>
+
+
+</div>
+</body>
+
+</html>
