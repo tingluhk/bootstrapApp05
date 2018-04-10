@@ -1,0 +1,46 @@
+$cprimary01:#45a2b2;
+$cprimary02:#27c0db;
+$cprimary03:#48a9bf;
+
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+}
+
+.container01{
+  height: 100vh;
+  background: $cprimary01;
+
+  .btn-primary01{
+    background-color: $cprimary01;
+    border-color: $cprimary01;
+    color:#fff;
+    &:active{
+      border-color: $cprimary02;
+      background-color: $cprimary02;
+      color:#000;
+    }
+    &:hover{
+      border-color: $cprimary02;
+      background-color: $cprimary02;
+      color:#000;
+    }
+  }
+
+
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color:$cprimary01;
+  }
+  a{
+    color: $cprimary02;
+  }
+
+}
+
+
+.content01{border-radius: 1em;
+background: #fff;
+width: 80%;
+margin: 0 auto;
+padding: 2em;
+font-size: 1em;}

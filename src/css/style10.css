@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-column-gap: 50px; }
+
+.container01 {
+  height: 100vh;
+  background: #45a2b2; }
+  .container01 .btn-primary01 {
+    background-color: #45a2b2;
+    border-color: #45a2b2;
+    color: #fff; }
+    .container01 .btn-primary01:active {
+      border-color: #27c0db;
+      background-color: #27c0db;
+      color: #000; }
+    .container01 .btn-primary01:hover {
+      border-color: #27c0db;
+      background-color: #27c0db;
+      color: #000; }
+  .container01 .nav-pills .nav-link.active, .container01 .nav-pills .show > .nav-link {
+    background-color: #45a2b2; }
+  .container01 a {
+    color: #27c0db; }
+
+.content01 {
+  border-radius: 1em;
+  background: #fff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2em;
+  font-size: 1em; }

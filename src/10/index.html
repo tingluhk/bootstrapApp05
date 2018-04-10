@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>css grid</title>
+  <link rel="stylesheet" href="../css/style10.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+
+
+
+</head>
+
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+    <div class="grid-item">7</div>
+    <div class="grid-item">8</div>
+    <div class="grid-item">9</div>
+  </div>
+
+  <div class="container">
+
+
+
+
+    <div class="container01">
+
+
+
+
+
+
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+        </li>
+      </ul>
+
+      <div class="content01">
+
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+            why don't they put something in here? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates harum sit eum ullam quasi saepe, deserunt autem numquam, ipsam porro consequatur aperiam nesciunt ad. Eligendi modi facilis ex, placeat a in, accusamus
+            consequuntur eos at dolorem iste assumenda officiis ad, eaque ratione sint harum possimus repudiandae totam voluptates nihil enim corporis distinctio! Modi voluptatum nemo officiis laboriosam ea unde perferendis error, ut vero? Possimus recusandae
+            inventore repellat, ipsam fugit quo earum excepturi nam, nobis ex eaque! Aperiam quam optio quod nostrum reiciendis, architecto! Molestiae mollitia qui dolorum quae voluptatibus iusto natus officia non quia. Adipisci autem, amet dolor corporis
+            et.
+
+          </div>
+
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos soluta expedita facere vitae voluptate odio totam, cumque qui omnis earum voluptas quae, culpa rem temporibus ex voluptatum velit tempora quos iure. Consequatur, nisi vero dolorem, autem ad
+            alias, deserunt similique optio at dolorum voluptatum. Porro blanditiis fuga similique debitis, earum.
+
+            <br>
+            <br> why don't they put something in here?
+            <br>
+            <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates harum sit eum ullam quasi saepe, deserunt autem numquam, ipsam porro consequatur aperiam nesciunt ad. Eligendi modi facilis ex, placeat a in, accusamus consequuntur
+            eos at dolorem iste assumenda officiis ad, eaque ratione sint harum possimus repudiandae totam voluptates nihil enim corporis distinctio! Modi voluptatum nemo officiis laboriosam ea unde perferendis error, ut vero? Possimus recusandae inventore
+            repellat, ipsam fugit quo earum excepturi nam, nobis ex eaque! Aperiam quam optio quod nostrum reiciendis, architecto! Molestiae mollitia qui dolorum quae voluptatibus iusto natus officia non quia. Adipisci autem, amet dolor corporis et.
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+
+
+
+  <script>
+    function closepopover() {
+      let allinputs = $('.cus_pop');
+      $(allinputs).removeAttr('data-placement');
+      $(allinputs).removeAttr('data-content');
+      $(allinputs).removeAttr('data-original-title');
+      $(allinputs).removeAttr('aria-describedby');
+    }
+
+
+    $(document).ready(function() {
+
+      $('input').on('click', function() {
+        console.log("input clicked");
+        closepopover();
+      })
+      $('.popover01').popover();
+      $('.popover02').popover();
+      $('.cus_pop').popover()
+    });
+
+
+
+    $(".cus_btb01").on("click", function() {
+
+      let allinputs = $('.cus_pop');
+      $(allinputs).popover("hide")
+      // console.log("allinputs === ");
+      // console.log(allinputs);
+
+      for (var i = 0; i < allinputs.length; i++) {
+        triggerPopOver(i, allinputs[i])
+      }
+
+    })
+
+    function triggerPopOver(i, allinput) {
+      console.log("allinput = ");
+      console.log(allinput);
+
+      let inp01 = $(allinput).val();
+      console.log("inp01 = ");
+      console.log(inp01);
+      if (inp01 === "") {
+        //show popover
+        let all_classes = $(allinput).attr('class');
+        all_classes = all_classes.split(" ");
+        // console.log("typeof(all_classes) == ");
+        // console.log(typeof(all_classes));
+        // console.log(all_classes[1]);
+        let choices = all_classes[1].split("_");
+        // console.log("choices = ");
+        // console.log(choices[3]);
+        let content = choices[3]
+        let position = choices[1]
+        let error = getErrors(content)
+        makePopover($(allinput), 'right', error)
+        // $('.cus_pop').popover('show')
+      } else {
+        //does nothing
+      }
+
+
+
+      // console.log("position = " + position +", content = " + content + ", error = " + error);
+
+
+
+    }
+
+
+    function getErrors(num) {
+      let num1 = parseInt(num);
+      switch (num1) {
+        case 1:
+          return "you need to get margin correct"
+          break;
+        case 2:
+          return "please jump 3 steps"
+          break;
+        case 3:
+          return "please go to cordination 140,410"
+          break;
+        case 4:
+          return "somethig is wrong please fix it"
+          break;
+        default:
+          return "default error block"
+      }
+    }
+
+
+
+    function makePopover(ele, placement, content) {
+      $(ele).attr('data-placement', placement);
+      $(ele).attr('data-content', content);
+      $(ele).popover('show');
+
+      console.log("ele");
+      console.log(ele);
+
+    }
+  </script>
+
+
+  </div>
+</body>
+
+</html>
