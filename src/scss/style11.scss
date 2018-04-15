@@ -1,6 +1,14 @@
 body{
   /* background: #f00; */
+  font-family: sans-serif;
 }
+
+.clearfix{
+  clear: both;
+  content: none;
+  border: 1px solid blue;
+}
+
 
 .exampleBox{
   margin-top: 3vh;
@@ -31,6 +39,128 @@ body{
   div.content h1 + div {background: blue}
   div.content h1 + div ol{background: yellow}
 }
+
+.lesson08{
+  h2 ~ol {background: yellow}
+  h2 ~ol {color: blue}
+}
+.lesson09{
+  :root {background: red;}
+  .content {background: teal;}
+  p:empty{background: green;}
+  div:empty{background: red;}
+  span:only-child {border: 1px solid orange;}
+}
+
+.lesson10{
+  a[href] img:only-child {border: 2px solid purple;}
+}
+.lesson11{
+  a[href] img:only-of-type {border: 2px solid purple;}
+}
+.lesson12{
+  p.one:only-of-type {
+    font-size: 2em;
+    color: purple;}
+
+}
+
+.lesson13{
+  p:first-child {color: purple;font-weight: bold;}
+  span:first-child {color: red;font-weight: bold;}
+}
+
+.lesson14{
+  span:only-of-type{background: purple;}
+  span:first-of-type:last-of-type {background: red;}
+}
+.lesson15{
+  input[type="checkbox"]:checked + label {
+    background: red;
+    font-style: italic;
+  }
+}
+
+.lesson16{
+  p:first-of-type::first-letter {font-size: 3em;}
+  p::first-line {text-decoration: line-through;color: purple;}
+}
+.lesson17{
+  #rollcall li {display: inline; border-right: 1px solid; padding: 0 0.33em;}
+  #rollcall li:first-child {border-left: 1px solid;}
+}
+
+
+
+.lesson19{
+  .content{
+    width:500px;
+    background: blue;
+    .box1 {background: green;top: 50%; bottom: 0; left: 50%; right: 0; margin: 10em;}
+    .box2 {background: red;top: 60%; bottom: 10%; left: 60%; right: 10%; margin: 0;}
+  }
+
+}
+
+
+.lesson20{
+  .div01{
+    position: relative;
+    width: 25em;
+    border: 1px dotted;
+    .span01{
+      position: absolute;
+      top: 0; left: 0; right: auto;
+      width: auto;
+      background: silver;
+    }
+    .span02{
+      position: absolute;
+      top: 0; left: 1em; right: 1em;
+      width: 10em; margin: 0 auto;
+      background: red;
+    }
+    .span03{
+      position:absolute;
+      top: 0; left: 1em; right: 1em;
+      width: 10em; margin-left: 1em;
+      margin-right: 1em;
+      background: green;
+    }
+  }
+
+
+}
+
+
+
+.lesson21{
+  .box01{
+    width: 40em;
+    img.slide {position: relative; left: 30px;}
+  }
+
+}
+
+
+
+.lesson22{
+  .box01 {overflow: scroll; width: 15em; height: 18em;
+    h2 {position: sticky; top: 0em; bottom: auto;
+      background: blue;
+      color: white;
+    left: auto; right: auto;}
+  }
+
+}
+
+
+
+
+
+
+
+
 
 input[title*="format"] {background-color: #dedede;}
 *[class|="btn"][class*="-arrow"]:after { content: "$";}

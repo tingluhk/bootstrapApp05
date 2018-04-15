@@ -1,0 +1,98 @@
+body {
+  /* background: #f00; */
+  font-family: sans-serif; }
+
+.clearfix {
+  clear: both;
+  content: none;
+  border: 1px solid blue; }
+
+.exampleBox {
+  margin-top: 3vh;
+  border: 1px solid #555; }
+  .exampleBox .title {
+    background: #e6f9ff;
+    padding: 10px; }
+
+.lesson01 .box01 {
+  display: flex; }
+
+.lesson01 .box02 {
+  display: inline-flex; }
+
+.lesson01 div {
+  border: 1px dashed;
+  background: #eee; }
+
+.lesson01 div > * {
+  border: 1px solid;
+  background: #e2e2e2; }
+
+.lesson01 div p {
+  margin: 10px; }
+
+.lesson02 .flex_box_main01 {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px dashed;
+  padding: 3px; }
+
+.lesson02 .flex_box_main02 {
+  display: inline-flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px dashed;
+  padding: 3px; }
+
+.lesson02 .flexbox01 {
+  border: 1px solid;
+  margin: 10px;
+  padding: 20px 5px;
+  line-height: 30px;
+  background: #bcd2f4; }
+
+.lesson03 nav {
+  display: flex; }
+  .lesson03 nav a {
+    padding: 5px;
+    background-color: #d6e6ff; }
+  .lesson03 nav a:hover, .lesson03 nav a:focus, .lesson03 nav a:active {
+    background-color: #aacbff;
+    color: black; }
+
+.lesson04 .container {
+  min-width: 150px;
+  max-width: 200px; }
+
+.lesson04 nav {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc; }
+
+.lesson04 a {
+  margin: 5px;
+  padding: 5px 15px;
+  border-radius: 3px;
+  background-color: #ccc;
+  text-decoration: none;
+  color: black; }
+
+.lesson04 a:hover, .lesson04 a:focus, .lesson04 a:active {
+  background-color: #aaa;
+  text-decoration: underline; }
+
+.lesson05 * {
+  outline: 1px #ccc solid;
+  margin: 10px;
+  padding: 10px; }
+
+.lesson05 nav, .lesson05 main, .lesson05 article {
+  display: flex; }
+
+.lesson05 article {
+  flex-direction: column; }
+
+input[title*="format"] {
+  background-color: #dedede; }
+
+*[class|="btn"][class*="-arrow"]:after {
+  content: "$"; }

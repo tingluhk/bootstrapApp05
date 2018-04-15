@@ -119,9 +119,7 @@
 
   <div class="exampleBox lesson07">
     <div class="title">
-      div.content h1{background: purple}<br/>
-      div.content h1 + div {background: blue}<br/>
-      div.content h1 + div ol{background: yellow}<br/>
+      div.content h1{background: purple}<br/> div.content h1 + div {background: blue}<br/> div.content h1 + div ol{background: yellow}<br/>
     </div>
     <div class="content">
       <div>div01</div>
@@ -141,6 +139,348 @@
       <div class="content01"></div>
     </div>
   </div>
+
+
+
+
+
+  <div class="exampleBox lesson08">
+    <div class="title">
+      general sibling combinator<br/> h2 ~ol {background: yellow}<br/> h2 ~ol {color: blue}<br/>
+    </div>
+    <div class="content">
+      <div>
+        <h2>h2 tag</h2>
+        <div>
+          <h2>h2 tag 2</h2>
+          <p>
+            <ol>
+              <li>li 1 </li>
+              <li>li 2 </li>
+              <li>li 3 </li>
+            </ol>
+          </p>
+        </div>
+        <p>p tag here</p>
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, adipisci!</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, adipisci!</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, adipisci!</li>
+        </ol>
+        <p>p tag here</p>
+        <ol>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, adipisci!</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, adipisci!</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, adipisci!</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="exampleBox lesson09">
+    <div class="title">
+      Pseudo selector<br/> :root {background: red;}<br/> .content {background: teal;}<br/> p:empty{background: green;}<br/> div:empty{background: red;}<br/> p:only-child {border: 1px solid orange;}<br/>
+    </div>
+    <div class="content">
+      test
+      <div>4</div>
+      <div><span>span</span><span>span</span></div>
+      <div>div<span>span</span>div</div>
+      <div>1</div>
+
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+
+
+  <div class="exampleBox lesson10">
+    <div class="title">
+      a[href] img:only-child {border: 2px solid purple;}
+    </div>
+    <div class="content">
+      <div>
+        <a href="">
+          <img src="../img/arrow_right_01.jpg" alt=""></a>
+        <img src="../img/arrow_right_01.jpg" alt="">
+      </div>
+      <a href=""><img src="../img/arrow_right_01.jpg" alt=""> <div>hi</div></a>
+      <a href=""><img src="../img/arrow_right_01.jpg" alt="">hi</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="exampleBox lesson11">
+    <div class="title">
+      a[href] img:only-of-type {border: 2px solid purple;}
+    </div>
+    <div class="content">
+      <div>
+        <a href="">
+              <b>b tag</b>
+              <img src="../img/arrow_right_01.jpg" alt=""><div>div tag</div></a>
+        <img src="../img/arrow_right_01.jpg" alt="">
+      </div>
+      <a href=""><img src="../img/arrow_right_01.jpg" alt=""> <div>hi</div></a>
+      <a href=""><img src="../img/arrow_right_01.jpg" alt="">hi</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="exampleBox lesson12">
+    <div class="title">
+      p.one:only-of-type {color: purple;}
+    </div>
+    <div class="content">
+
+      <p class="one"> p + one class.</p>
+      <p>p no class name.</p>
+      <p> paragraph has only-of-type.</p>
+      <div>
+        <p class="one">one class paragraph only-of-type within a div</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="exampleBox lesson13">
+    <div class="title">
+      pseudo-classes adds a invisible class to elements, that is not visible by the developer, so normally your code looks like [div], but css if pseudo is targetted, it becomes [div class="first-child"]<br> p:first-child {color: purple}<br/> span:first-child
+      {color: red}<br/>
+    </div>
+    <div class="content">
+      <p>[p]one[/p]</p>
+      <p>[p]two[/p]</p>
+      <span>[span]one[/span]</span>
+      <span>[span]two[/span]</span>
+
+      <div>
+        [div]
+        <span>[span]three[/span]</span>
+        <p>[p]three[/p]</p>
+        <p>[p]four[/p]</p>
+        [/div]
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="exampleBox lesson14">
+    <div class="title">
+      div:only-of-type{color: red;}<br> span:first-of-type:last-of-type {background: red;}<br>
+    </div>
+    <div class="content">
+      <span>[span]one[/span]</span>
+
+      <p>[p]one[/p]</p>
+      <p>[p]two[/p]
+        <div>[div]div here[/div]</div>
+      </p>
+
+      <span>[span]two[/span]</span>
+
+      <div>
+        [div]
+        <span>[span]three[/span]</span>
+        <p>[p]three[/p]</p>
+        <p>[p]four[/p]</p>
+        [/div]
+      </div>
+    </div>
+    <span>[span]four[/span]</span>
+
+  </div>
+
+
+
+
+
+  <div class="exampleBox lesson15">
+    <div class="title">
+      input[type="checkbox"]:checked + label { <br> background: red; <br> font-style: italic; <br> } <br>
+    </div>
+    <div class="content">
+      <input class="chbx" type="checkbox"> <label for="chbx">I am a label</label>
+      <input class="chbx" type="checkbox"> <label for="chbx">I am a label</label>
+      <input type="checkbox"> <label for="chbx">I am a label</label>
+      <input type="checkbox"> <label for="chbx">I am a label</label>
+      <input type="checkbox"> <label for="chbx">I am a label</label>
+    </div>
+  </div>
+
+  <div class="exampleBox lesson16">
+    <div class="title">
+      p:first-of-type::first-letter {font-size: 3em;}<br>
+    </div>
+    <div class="content">
+      <p>
+        T Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur alias dicta iusto sed reiciendis repudiandae officia amet voluptas, molestiae, quisquam recusandae dolore id animi sit distinctio blanditiis reprehenderit eius quasi.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="exampleBox lesson17">
+    <div class="title">
+      #rollcall li {display: inline; border-right: 1px solid; padding: 0 0.33em;}<br> #rollcall li:first-child {border-left: 1px solid;}
+    </div>
+    <div class="content">
+      <ul id="rollcall">
+        <li>AA</li>
+        <li>BB</li>
+        <li>CC</li>
+        <li>DD</li>
+        <li>EE</li>
+
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="exampleBox lesson18">
+    <div class="title">
+      float:left;width:25px;display:block;<br> float:left;width:50px;display:block;
+      <br> float:left;width:100px;display:block;
+      <br>
+    </div>
+    <div class="content">
+      <img src="../img/arrow_right_01.jpg" alt="" style="float:left;width:25px;display:block;"></a>
+      <img src="../img/arrow_right_01.jpg" alt="" style="float:left;width:50px;display:block;"></a>
+      <img src="../img/arrow_right_01.jpg" alt="" style="float:left;width:100px;display:block;"></a>
+  <div class="clearfix"></div>
+    </div>
+  </div>
+
+
+
+
+  <div class="exampleBox lesson19">
+    <div class="title">
+      .content{<br>
+        width:500px;<br>
+        background: blue;<br>
+        .box1 {background: green;top: 50%; bottom: 0; left: 50%; right: 0; margin: 10em;}<br>
+        .box2 {background: red;top: 60%; bottom: 10%; left: 60%; right: 10%; margin: 0;}<br>
+      }<br>
+    </div>
+    <div class="content">
+      test
+      <div class="box1">test</div>
+      <div class="box2">test</div>
+    </div>
+  </div>
+
+
+
+  <div class="exampleBox lesson20">
+    <div class="title">
+      .div01{
+        position: relative;
+        width: 25em;
+        border: 1px dotted;<br>
+        .span01{
+          position: absolute;
+          top: 0; left: 0; right: auto;
+          width: auto;
+          background: silver;
+        }<br>
+        .span02{
+          position: absolute;
+          top: 0; left: 0; right: auto;
+          width: auto;
+          background: silver;
+        }<br>
+      }
+    </div>
+    <div class="content">
+<div class="div01">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sapiente consequatur <span class="span01">[span01]labore error consequuntur[/span01]</span>, atque odio quaerat beatae incidunt nemo repellat<span class="span02">[span01]labore error consequuntur[/span01]</span> assumenda, obcaecati delectus reprehenderit. Iure, nesciunt dolore fugit aliquid! Esse officiis ab explicabo c<span class="span03">[span01]labore error consequuntur[/span01]</span>umque adipisci aut, blanditiis ad molestiae.</div>
+    </div>
+  </div>
+
+
+
+
+  <div class="exampleBox lesson21">
+    <div class="title">
+      .box01{<br>
+        width: 40em;<br>
+        img.slide {position: relative; left: 30px;}<br>
+      }
+    </div>
+    <div class="content">
+      <div class="box01">
+        <p>
+        In this paragraph, we will find that there is an image that has been
+        pushed to the right. It will therefore <img src="../img/arrow_right_01.jpg"
+        class="slide"> overlap content nearby, assuming that it is not the
+        last element in its line box.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+    <div class="exampleBox lesson22">
+      <div class="title">
+        .box01 {overflow: scroll; width: 15em; height: 18em;<br>
+          h2 {position: sticky; top: 0em; bottom: auto;<br>
+            background: blue;color: white;left: auto; right: auto;
+          }<br>
+        }
+      </div>
+      <div class="content">
+        <div class="box01"><h2>this paragraph,</h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, fuga in magni, et omnis velit reprehenderit! Iste labore vitae dolore explicabo minima ut libero, aut ducimus consectetur repellat sunt dicta temporibus consequatur odio, fugiat quod ipsum corporis. Ad, blanditiis quo!lit reprehenderit! Iste labore vitae dolore explicabo minima ut libero, aut ducimus consectetur repellat sunt dicta temporibus consequatur odio, fugiat quod ipsum corporis. Ad, blanditiis quo!
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
