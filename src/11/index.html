@@ -20,32 +20,93 @@
 
   <div class="exampleBox">
     <div class="title">
-    input[title*="format"] {background-color: #dedede;}
+      input[title*="format"] {background-color: #dedede;}
     </div>
-  <input type="tel" title="Telephone number should be formatted as XXX-XXX-XXXX" pattern="\d{3}\-\d{3}\-\d{4}">
-</div>
-
-
-<div class="exampleBox">
-  <div class="title">
-    *[class|="btn"][class*="-arrow"]:after { content: "$";}
+    <input type="tel" title="Telephone number should be formatted as XXX-XXX-XXXX" pattern="\d{3}\-\d{3}\-\d{4}">
   </div>
-  <button class="btn-small-arrow-active">Click Me</button>
-</div>
 
 
-
-
-<div class="exampleBox lesson04">
-  <div class="title">
-    h1 > strong {color: red;}
-    h1 > em > strong {color: purple;}
+  <div class="exampleBox">
+    <div class="title">
+      *[class|="btn"][class*="-arrow"]:after { content: "$";}
+    </div>
+    <button class="btn-small-arrow-active">Click Me</button>
   </div>
-  <div class="content">
-    <h1>This is <strong>very</strong> important.</h1>
-    <h1>This is <em>really <strong>very</strong></em> important.</h1>
+
+
+
+
+  <div class="exampleBox lesson04">
+    <div class="title">
+      h1 > strong {color: red;} h1 > em > strong {color: purple;}
+    </div>
+    <div class="content">
+      <h1>This is <strong>very</strong> important.</h1>
+      <h1>This is <em>really <strong>very</strong></em> important.</h1>
+    </div>
   </div>
-</div>
+
+
+
+  <div class="exampleBox lesson05">
+    <div class="title">
+      “Selects any p element that immediately follows an h1 element that shares a parent with the p element.”<br/> h5 + p {color: #f00;}<br/> li + li {font-weight: bold;}<br/>
+    </div>
+    <div class="content">
+      <h5>This is <p>&ltp&gt  very  &lt/p&gt</p> important.</h5>
+      <p>&ltp&gt hello &lt/p&gt</p>
+      <h5>This is <em>really <strong>very</strong></em> important.</h5>
+      <div>
+        <ol>
+          <li>List item 1</li>
+          <li>List item 1</li>
+          <li>List item 1</li>
+        </ol>
+        This is some text that is part of the 'div'.
+        <ul>
+          <li>A list item</li>
+          <li>Another list item</li>
+          <li>Yet another list item</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="exampleBox lesson06">
+    <div class="title">
+      <p>"Selects any span that immediately follows a sibling table element that is descended from a body element that is itself a child of an div element."
+      </p>
+      <p> div > p + span{background:red}</p>
+      <p> div > p + li{background:red}</p>
+    </div>
+    <div class="content">
+      <div>
+        <p>
+          <span>yo span 11</span>
+          <li>
+            <span>yo span 22</span> yo
+          </li>
+          <li>what</li>
+          <span>yo span</span>
+          <div>
+            <p>&ltdiv&gt&ltp&gt something &lt/p&gt&lt/div&gt</p>
+            <span>yo</span>
+          </div>
+          <ul>
+            <li>a<span>yo</span></li>
+            <li>b</li>
+            <span>yo1</span>
+          </ul>
+        </p>
+
+      </div>
+
+
+    </div>
+  </div>
 
 
 
@@ -54,6 +115,32 @@
 
 
 
+
+
+  <div class="exampleBox lesson07">
+    <div class="title">
+      div.content h1{background: purple}<br/>
+      div.content h1 + div {background: blue}<br/>
+      div.content h1 + div ol{background: yellow}<br/>
+    </div>
+    <div class="content">
+      <div>div01</div>
+      <h1>hi</h1>
+      <div>div01
+        <ol>
+          <li>li</li>
+          <li>li</li>
+        </ol>
+      </div>
+      <div>div01
+        <ol>
+          <li>li</li>
+          <li>li</li>
+        </ol>
+      </div>
+      <div class="content01"></div>
+    </div>
+  </div>
 
 
 

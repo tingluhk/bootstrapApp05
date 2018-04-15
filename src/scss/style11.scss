@@ -17,7 +17,20 @@ body{
   h1 > em > strong {color: purple;}
 }
 
+.lesson05{
+  h5 + p {color: #f00;}
+  li + li {font-weight: bold;}
+}
+.lesson06{
+  div > p + span{background:red}
+  div > p + li{background:red}
+}
 
+.lesson07{
+  div.content h1{background: purple}
+  div.content h1 + div {background: blue}
+  div.content h1 + div ol{background: yellow}
+}
 
 input[title*="format"] {background-color: #dedede;}
 *[class|="btn"][class*="-arrow"]:after { content: "$";}
