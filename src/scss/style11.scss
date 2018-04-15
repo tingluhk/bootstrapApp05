@@ -1,0 +1,23 @@
+body{
+  /* background: #f00; */
+}
+
+.exampleBox{
+  margin-top: 3vh;
+
+  border:1px solid #555;
+  .title{
+    background: #e6f9ff;
+    padding: 10px;
+  }
+}
+
+.lesson04{
+  h1 > strong {color: red;}
+  h1 > em > strong {color: purple;}
+}
+
+
+
+input[title*="format"] {background-color: #dedede;}
+*[class|="btn"][class*="-arrow"]:after { content: "$";}
