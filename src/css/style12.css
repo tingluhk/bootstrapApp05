@@ -2,10 +2,50 @@ body {
   /* background: #f00; */
   font-family: sans-serif; }
 
+.borderR01 {
+  border: 2px solid red; }
+
+.borderG01 {
+  border: 2px solid green; }
+
+.borderB01 {
+  border: 2px solid blue; }
+
 .clearfix {
   clear: both;
   content: none;
   border: 1px solid blue; }
+
+.lesson07 .container01 {
+  display: flex; }
+
+.lesson07 .box {
+  flex: 1 0.25 auto; }
+
+.lesson07 .box:last-child {
+  flex: 1 0.75 auto; }
+
+.lesson06 {
+  border: 2px solid #00f; }
+  .lesson06 .container01 {
+    border: 2px solid #999;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; }
+    .lesson06 .container01 .guitar {
+      width: 100%; }
+    .lesson06 .container01 .box01 p {
+      font-weight: bold; }
+  .lesson06 .box01 {
+    border: 2px solid #f00;
+    align-self: center;
+    max-width: 600px;
+    padding: 10px;
+    box-sizing: border-box; }
+  .lesson06 .box02 {
+    border: 2px solid #0f0;
+    align-self: center;
+    max-width: 600px; }
 
 .exampleBox {
   margin-top: 3vh;
@@ -91,6 +131,20 @@ body {
 .lesson05 article {
   flex-direction: column; }
 
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  .container01 {
+    flex-direction: column-reverse; } }
+
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  .container01 {
+    flex-direction: row; } }
+
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */
 input[title*="format"] {
   background-color: #dedede; }
 

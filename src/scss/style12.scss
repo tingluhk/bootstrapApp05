@@ -3,11 +3,94 @@ body{
   font-family: sans-serif;
 }
 
+.borderR01{border: 2px solid red}
+.borderG01{border: 2px solid green}
+.borderB01{border: 2px solid blue}
+
+
+
 .clearfix{
   clear: both;
   content: none;
   border: 1px solid blue;
 }
+
+
+
+
+
+
+.lesson07{
+  .container01{
+    display: flex;
+  }
+
+  .box{
+    flex: 1 0.25 auto;
+  }
+
+  .box:last-child{
+    flex: 1 0.75 auto;
+  }
+
+}
+
+
+
+
+
+
+
+
+.lesson06{
+  border: 2px solid #00f;
+
+  .container01{
+    border: 2px solid #999;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    .guitar{
+      width:100%;
+    }
+    .box01{
+      p{
+        font-weight: bold;
+      }
+    }
+  }
+  .box01{
+    border: 2px solid #f00;
+    align-self:center;
+    max-width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .box02{
+    border: 2px solid #0f0;
+    align-self: center;
+    max-width: 600px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .exampleBox{
@@ -110,6 +193,41 @@ body{
     flex-direction: column;
   }
 }
+
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  .container01{
+    flex-direction:column-reverse;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .container01{
+    flex-direction:row;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+
 
 
 input[title*="format"] {background-color: #dedede;}
