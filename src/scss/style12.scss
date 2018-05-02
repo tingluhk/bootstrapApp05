@@ -46,12 +46,17 @@ body{
   border: 2px solid #00f;
 
   .container01{
+    background-image: url("../img/car_img_001.jpg");
+    background-position: center;
+    background-size: cover;
     border: 2px solid #999;
     margin:0 auto;
     display: flex;
     justify-content: center;
     .guitar{
       width:100%;
+      border-radius: 0.5em;
+      opacity: 0.95;
     }
     .box01{
       p{
@@ -60,16 +65,20 @@ body{
     }
   }
   .box01{
-    border: 2px solid #f00;
+    // border: 2px solid #f00;
     align-self:center;
     max-width: 600px;
-    padding: 10px;
+    margin: 20px;
+    padding: 20px;
     box-sizing: border-box;
+    border-radius: 0.5em;
+    background:rgba(255,255,255,0.7)
   }
   .box02{
-    border: 2px solid #0f0;
+    // border: 2px solid #0f0;
     align-self: center;
-    max-width: 600px;
+    max-width: 550px;
+    margin: 40px 20px;
   }
 
 }
